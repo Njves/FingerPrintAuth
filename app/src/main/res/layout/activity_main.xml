@@ -23,8 +23,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center_horizontal">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
         <Button android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,5 +45,27 @@
                 android:layout_height="wrap_content"
                 android:text="Random number"
                 android:onClick="showRandom"/>
+        </LinearLayout>
+
     </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+        <Button
+                android:id="@+id/led_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LED_ON"
+                android:onClick="led_on"/>
+        <Button
+                android:id="@+id/led_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LED_OFF"
+                android:onClick="led_off"/>
+    </LinearLayout>
+
 </LinearLayout>

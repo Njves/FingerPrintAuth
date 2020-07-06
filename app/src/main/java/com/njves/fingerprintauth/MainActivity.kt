@@ -12,6 +12,7 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     private var count = -1
     private lateinit var tvCount: TextView
+    private var t = ServerCommand()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,5 +36,13 @@ class MainActivity : AppCompatActivity() {
     fun showRandom(view: View){
         val intent = Intent(this, RandomActivity::class.java)
         startActivity(intent)
+    }
+
+    fun led_on(view: View){
+        t.ledOn()
+    }
+
+    fun led_off(view: View){
+        t.ledOff()
     }
 }
